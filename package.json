@@ -1,0 +1,41 @@
+{
+  "name": "desktop-buddy",
+  "version": "0.1.0",
+  "description": "A calm desktop companion for water, lunch and screen breaks.",
+  "main": "out/main/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "electron-builder install-app-deps",
+    "package:win": "electron-vite build && electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "electron-store": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5",
+    "electron-vite": "^2.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  },
+  "build": {
+    "appId": "com.desktopbuddy.app",
+    "productName": "Desktop Buddy",
+    "files": ["out/**/*", "package.json"],
+    "extraResources": [{ "from": "assets", "to": "assets" }],
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
