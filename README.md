@@ -4,7 +4,6 @@ A calm desktop companion for Windows. A small animated character lives in your
 tray, reminds you to drink water, eat lunch, and step away from the screen, and
 keeps time for focus sessions - without ever nagging you.
 
-Built to the Phase 1 (MVP) scope of `desktop-buddy-antigravity-prompt.md`.
 
 ## Requirements
 
